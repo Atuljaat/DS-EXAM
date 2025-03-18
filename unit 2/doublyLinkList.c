@@ -9,7 +9,7 @@ struct node {
 
 struct node *start = NULL;
 
-void createDoublyLinkList () {
+void createDoublyLinkList () { 
     struct node *box = (struct node *)malloc(sizeof(struct node));
     if (box == NULL ) {
         printf("Memory Allocation failed \n");
@@ -127,7 +127,7 @@ void reverseLinkList () {
     if (start == NULL){
         printf("List doesnt exist");
         return;
-    }
+    } 
 
    struct node *curr = start;
    struct node *temp = NULL;

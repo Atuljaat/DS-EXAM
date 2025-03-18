@@ -8,6 +8,16 @@ void printArray(int arr[], int size)
     }
 }
 
+void insertAtEnd (int arr[] , int size , int num){
+    int newArray[size+1];
+    for (int i = 0; i < size; i++)
+    {
+        newArray[i] = arr[i];
+    }
+    newArray[size] = num;
+    printArray(newArray,4);
+}
+
 void insertAtStart(int arr[], int size, int element)
 {
     for (int i = size - 2; i >= 0; i--)
@@ -24,6 +34,8 @@ void insertAtPoint(int arr[], int size, int position, int element)
         arr[i + 1] = arr[i];
     }
     arr[position] = element;
+
+
     // for eg : arr[4] = {5,4,3,0} here i = 2 ,  position= 1
     // 1 iteration : {5,4,3,3}
     // 2 iteration : {5,4,4,3}
@@ -128,11 +140,13 @@ void mergeArraySorted (int arr1[],int arr2[],int size1 , int size2){
 
 int main()
 {
-    int array[] = {1, 2, 3};
+    int array[3] = {1, 2, 3};
     int array2[] = { 4, 5, 6, 7, 8, 9};
     int size = sizeof(array) / sizeof(array[0]);
     int size2 = sizeof(array2) / sizeof(array2[0]);
-    printf("%d\n", size - 1);
+    mergeArrayUnsorted(array,array2,size,size2);
+    // insertAtEnd(array,size,10);
+    // printf("%d\n", size - 1);
     // insertAtStart(array,size,6);
     // insertAtPoint(array,size,1,0);
     // deleteAtPoint(array,size,1);

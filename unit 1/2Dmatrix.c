@@ -21,16 +21,16 @@ void print2DArray (int arr[3][3] , int rows , int cols){
 }
 
 void transposeArraySquare (int arr[3][3] , int rows , int cols){
+    int arr3[3][3];
     for (int i = 0; i < rows; i++)
     {
-        for (int j = i + 1; j < cols; j++)
+        for (int j = 0; j < cols; j++)
         {
-            int temp = arr[i][j];
-            arr[i][j] = arr[j][i];
-            arr[j][i] = temp;
+           arr3[j][i] = arr[i][j]; 
         }
-        
     }
+    print2DArray(arr,3,3);
+    print2DArray(arr3,3,3);
 }
 
 void add2SquareArray (int arr1[3][3] , int arr2[3][3] , int rows , int cols){
@@ -66,7 +66,7 @@ void multiply2SquareArray (int arr1[3][3] , int arr2[3][3] , int rows , int cols
             int sum = 0;
             for (int k = 0; k < rows; k++)
             {   
-                sum = sum + (arr1[k][j] * arr2[i][k]);
+                sum = sum + (arr1[i][k] * arr2[k][j]);
             }
             arr3[i][j] = sum;
         }
@@ -163,6 +163,9 @@ int main (){
         {4,5,6},
         {7,8,9}    
     };
+
+    transposeArraySquare(array1,3,3);
+
     int array3[2][3] = {
         {1,2,3},
         {4,5,6}

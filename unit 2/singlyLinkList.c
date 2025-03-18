@@ -22,7 +22,7 @@ void createSingleLinkList () {
     if (start == NULL) {
         start = box;
     } else {
-        struct node *ptr = start;
+        struct node *ptr = start; 
         while (ptr->next != NULL)
         {
             ptr = ptr->next;
