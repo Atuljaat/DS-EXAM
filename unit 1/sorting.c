@@ -12,7 +12,7 @@ void selectionSort (int arr[] , int size){
     for (int i = 0; i < size-1; i++)
     {
         int lowest = i ;
-        for (int j = i + 1; j < size; j++)
+        for (int j = i + 1; j < size ; j++)
         {
             if (arr[lowest] > arr[j]){
                 lowest = j;
@@ -77,6 +77,6 @@ int main(){
     int arr[] = {5,4,3,2,1};
     // int arr[] = {1,2,3,4,5};
     int size = sizeof(arr)/sizeof(arr[0]);
-    insertionSort(arr,size);
+    selectionSort(arr,size);
     printArray(arr,size);
 }

@@ -146,7 +146,6 @@ void reverseLinkList () {
    }
 }
 
-
 int main () {
     printf("Welcome to this program\n");
     int input;
